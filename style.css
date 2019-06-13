@@ -34,13 +34,3 @@ ul {
 ul > li {
     margin: 0 15px;
 }
-img.current {
-    transform: translateX(0);
-}
-img.stay {
-    transform: translateX(960px);
-}
-img.leave {
-    transform: translateX(-960px);
-}
-

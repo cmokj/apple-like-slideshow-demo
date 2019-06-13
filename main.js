@@ -27,8 +27,8 @@ var timer = setInterval(function () {
 $('#wrapper').on('mouseenter', function () {
     clearInterval(timer);
 })
-$('.wrapper').on('mouseout', function () {
-    timer = setInterval(function () {
+$('#wrapper').on('mouseleave', function () {
+    setInterval(function () {
         n++;
         if (n < $slide.length) {
             let s2 = n * -920;
