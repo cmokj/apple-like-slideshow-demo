@@ -1,8 +1,8 @@
 // 点击跳转
 var $slide = $('ul > li');
 for (let i = 0; i < $slide.length; i++) {
-    $($slide[i]).on('click', function (x) {
-        var s1 = i * -920;
+    $($slide[i]).on('click', function () {
+        let s1 = i * -920;
         $('#images').css({
             transform: 'translateX(' + s1 + 'px)'
         })
@@ -19,13 +19,13 @@ var timer = setInterval(function () {
             transform: 'translateX(' + s2 + 'px)'
         })
     } else {
-        n = 0;
+        n = -1;
     }
 }, 2000)
 
 // 鼠标移入移出事件
 $('#wrapper').on('mouseenter', function () {
-    clearInterval(timer);
+    window.clearInterval(timer);
 })
 $('#wrapper').on('mouseleave', function () {
     timer = setInterval(function () {
@@ -36,9 +36,28 @@ $('#wrapper').on('mouseleave', function () {
                 transform: 'translateX(' + s2 + 'px)'
             })
         } else {
-            n = 0;
+            n = -1;
         }
     }, 2000)
+})
+// 监听是否离开当前页面
+document.addEventListener('visibilitychange', function () {
+    if (document.hidden) {
+        window.clearInterval(timer);
+    } else {
+        timer = setInterval(function () {
+            n++;
+            if (n < $slide.length) {
+                let s2 = n * -920;
+                $('#images').css({
+                    transform: 'translateX(' + s2 + 'px)'
+                })
+            } else {
+                n = -1;
+            }
+        }, 2000)
+    }
+
 })
 
 
