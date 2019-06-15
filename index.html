@@ -3,46 +3,50 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Apple-like Slideshow</title>
+    <title>Apple-like Slideshow Gallery</title>
     <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
-    <h1 style="font-weight: normal">Apple-like Gallery<br>
+    <h1 style="font-weight: normal">
+        <span>Apple-like Gallery</span><br>
         <span style="font-weight: bold">Slideshow</span>
     </h1>
     <h2>
         view the <a href="#" style="color: blue;">original tutorial</a>
     </h2>
-    <div id="wrapper" class="wrapper">
+
+    <div class="wrapper">
         <div id="images" class="images">
             <img src="./img/macbook.jpg" alt="pic" width="920" height="400">
             <img src="./img/imac.jpg" alt="pic" width="920" height="400">
             <img src="./img/iphone.jpg" alt="pic" width="920" height="400">
             <img src="./img/info.jpg" alt="pic" width="920" height="400">
         </div>
-        <ul>
-            <li>
-                <a>
-                    <img src="./img/thumb_macbook.png" alt="button">
-                </a>
-            </li>
-            <li>
-                <a>
-                    <img src="./img/thumb_imac.png" alt="button">
-                </a>
-            </li>
-            <li>
-                <a>
-                    <img src="./img/thumb_iphone.png" alt="button">
-                </a>
-            </li>
-            <li>
-                <a>
-                    <img src="./img/thumb_about.png" alt="button">
-                </a>
-            </li>
-        </ul>
+        <div id="menu">
+            <ul>
+                <li>
+                    <a>
+                        <img src="./img/thumb_macbook.png" alt="button">
+                    </a>
+                </li>
+                <li>
+                    <a>
+                        <img src="./img/thumb_imac.png" alt="button">
+                    </a>
+                </li>
+                <li>
+                    <a>
+                        <img src="./img/thumb_iphone.png" alt="button">
+                    </a>
+                </li>
+                <li>
+                    <a>
+                        <img src="./img/thumb_about.png" alt="button">
+                    </a>
+                </li>
+            </ul>
+        </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="./main.js"></script>

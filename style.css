@@ -68,6 +68,10 @@ ul > li {
     display:inline-block;
     padding-left: 36px;
 }
+ul > li.active {
+    background-color: #eee;
+    box-shadow: 0 0 3px #dbdbdb;
+}
 ul > li > a{
 	display:block;
 	background:url(./img/divider.png) no-repeat right;
